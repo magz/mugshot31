@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Vote for the Mug o' the day</title>
+                <link href="/stylesheets/base.css?1208730625" media="screen" rel="stylesheet" type="text/css" />
+                <link href="/stylesheets/mugotheday.css?1208730625" media="screen" rel="stylesheet" type="text/css" />
+                <script src="/javascripts/prototype.js?1191184228" type="text/javascript"></script>
+<script src="/javascripts/effects.js?1191184228" type="text/javascript"></script>
+<script src="/javascripts/dragdrop.js?1191184228" type="text/javascript"></script>
+<script src="/javascripts/controls.js?1191184228" type="text/javascript"></script>
+<script src="/javascripts/application.js?1208739683" type="text/javascript"></script>
+                <script src="/javascripts/swfobject.js?1191184228" type="text/javascript"></script>
+                 <script src="/javascripts/zoomThumb.js?1210258794" type="text/javascript"></script>
+                <link rel="shortcut icon" href="/assets/favicon.ico" >
+        </head>
+	
+	<body>
+    	
+        <!-- BEGINNING SITE -->
+        <div id="site">
+            <!-- BEGINNING TOOLTIP HELPER -->
+            <div id="tooltip">
+                <div id="tooltip_helper">
+                </div>
+            </div>
+            <!-- END TOOLTIP HELPER -->
+            <!-- BEGINNING NAVIGATION COLUMN -->
+            <div id="nav_column">
+            
+                <div id="logo_box">
+                     <a href="/" id="home_link" title="Daily Mugshot Home">
+                      
+                      <img  id="logo" src="/assets/dates/05_07.png"/>
+                      <h1 id="title">Daily Mugshot</h1>
+                    </a> 
+              	</div>
+                
+              <!-- BEGINNING SIDE BOX -->
+              <div id="status_box" class="side_box">
+                    <div class="side_box_header">
+                         <!--BLANK-->
+                    </div>
+                    <div id="alert_container" class="side_box_content">
+                        <div id="alert_box">
+                              <a href="" class="new_mugshot">
+                                    <img border="false" src= <%= asset_path "dmslogo_med.png" %>  class="thumbnail" />
+                                    <strong>Update Area:</strong>
+                                    <span class="description">Check here for updates!</span>
+                              </a>
+                        </div>
+                    </div>
+                </div>    
+                <!-- END SIDE BOX -->  
+				<!-- BEGINNING NAVIGATION -->
+				<div id="nav">
+					<div id="account_login" class="side_box">
+						<div class="side_box_header">
+							<!--BLANK-->
+						</div>
+						<div class="side_box_content">
+                                                  
+    <div id="account_form">
+        <button id="login_new_account" class="button create_account" onmouseup="window.location='/account/signup';">Create An Account</button>
+        <div class="create_or">OR</div>
+        <form action="/account/login" method="post">
+        <label for="login_name">Login<input id="login_name" name="login" type="text" /></label>
+        <label for="login_password">Password:
+            <input id="login_password" name="password" type="password" />
+            <a id="login_forgot" href="/main/reminder">Forgot?</a>
+        </label>
+        Remember me: <input checked="checked" id="remember_me" name="remember_me" type="checkbox" value="1" />
+        <br />
+        <button type="submit" class="button login_now">Login Now!</button>
+        </form>
+    </div>
+
+                                                </div>
+					</div>		
+						
+					<div id="nav_locations" class="side_box">
+						<div class="side_box_header">
+							<!--BLANK-->
+						</div>
+						<div class="side_box_content">	
+                                                  <ul id="navUL">
+    
+    <li id="browseGal"><a href="/main/browse">Browse Gallery</a></li>
+    <li id="getReminders"><a href="/main/get_reminder">Get Reminders</a></li>
+    <li id="feedback"><a href="/main/feedback">Feedback</a></li>
+    <li id="upmBlog"><a href="http://blog.dailymugshot.com">DMS Blog</a></li>          
+    <li id="about"><a href="/main/about">About</a></li>
+    <li id="faq"><a href="/main/faq">FAQ</a></li>
+    
+  </ul> 
+
+                                                </div>
+					</div>	
+						
+				</div>
+				<!-- END NAVIGATION -->              
+                
+                
+            </div>
+             <!-- END NAVIGATION COLUMN -->
+            
+            <!-- BEGINNING MAIN CONTENT AREA -->
+            <div id="content" class="content_box">
+               <div class="content_box_header">
+                    <!--BLANK-->
+               </div>
+                  <div class="content_box_content">
+                    
+
+					<h1>Vote for Tuesday's Mug o' the Day</h1>
+	
+					<p>So, you've only voted for 1 mug o' the day. I'd start clicking if I were you...then again, I'm a website, so I'll just shut my big yapper.</p>
+					
+					<div class="mugshot_box">
+						
+						<div class="mugshot_box_content">
+							
+							<img id="mugshot_image" src="http://s3.amazonaws.com/dailymugshotprod/1210615164.20477wgnwdkavmv.jpg" />
+							
+							
+							<div id="motd_rating">
+								<strong>Rate it!</strong>
+								<ul class="star-rating">
+									<li class="current-rating" style="width: 45%;">Currently 5/5 Stars.</li>
+									<li><a href="#post_id=240&amp;rating=1" title="1 star out of 5" class="one-star">1</a></li>
+									<li><a href="#post_id=240&amp;rating=2" title="2 stars out of 5" class="two-stars">2</a></li>
+				
+									<li><a href="#post_id=240&amp;rating=3" title="3 stars out of 5" class="three-stars">3</a></li>
+									<li><a href="#post_id=240&amp;rating=4" title="4 stars out of 5" class="four-stars">4</a></li>
+									<li><a href="#post_id=240&amp;rating=5" title="5 stars out of 5" class="five-stars">5</a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="clearboth"><!-- CLEAR --></div> 
+					<p>You have <strong>3 hours, 25 minutes</strong> left to vote. <small>(Daily Mugshot Time: Thu 04:52 AM UTC)</small></p>
+					
+					<h3>Previously, you rated some mugshots...</h3>
+	
+					<ul id="mugshots_rated">
+						<li>
+							<div class="content">
+								<a href="/main/show/1" class="mugshot_pic zoom_thumb"><img alt="1211491510" src="http://s3.amazonaws.com/dailymugshotprod/1211491510.74212doictxtocq.jpg?large=http://s3.amazonaws.com/dailymugshotprod/1211491510.74203ovroobxdcf.jpg" /><span class='tip'>Image Loading...</span></a>
+								<strong>You just gave <a href="#">flipper</a> 3/5 stars</strong>
+								Keith has <span class="rating">4.5</span> stars based on 23 total votes.
+							</div> 				
+						</li>
+						<li class="alt">
+							<div class="content">
+								<a href="/main/show/2" class="mugshot_pic  zoom_thumb"><img alt="1211161127" src="http://s3.amazonaws.com/dailymugshotprod/1211161127.85159genbmoorvq.jpg?large=http://s3.amazonaws.com/dailymugshotprod/1211161127.8515vmsrgjotoa.jpg" /><span class='tip'>Image Loading...</span></a>
+								<strong>You just gave <a href="#">warrick</a> 3/5 stars</strong>
+								warrick has <span class="rating">4.5</span> stars based on 23 total votes. 
+							</div>				
+						</li>
+						<li>
+							<div class="content">
+								<a href="/main/show/1" class="mugshot_pic zoom_thumb"><img alt="1211491510" src="http://s3.amazonaws.com/dailymugshotprod/1211491510.74212doictxtocq.jpg?large=http://s3.amazonaws.com/dailymugshotprod/1211491510.74203ovroobxdcf.jpg" /><span class='tip'>Image Loading...</span></a>
+								<strong>You just gave <a href="#">alicey</a> 3/5 stars</strong>
+								alicey has <span class="rating">4.8</span> stars based on 23 total votes.
+							</div> 				
+						</li>
+						<li class="alt">
+							<div class="content">
+								<a href="/main/show/2" class="mugshot_pic  zoom_thumb"><img alt="1211161127" src="http://s3.amazonaws.com/dailymugshotprod/1211161127.85159genbmoorvq.jpg?large=http://s3.amazonaws.com/dailymugshotprod/1211161127.8515vmsrgjotoa.jpg" /><span class='tip'>Image Loading...</span></a>
+								<strong>You just gave <a href="#">irockj</a> 3/5 stars</strong>
+								irockj has <span class="rating">4.5</span> stars based on 23 total votes. 
+							</div>				
+						</li>
+						
+					</ul>
+					
+					<div class="clearboth"></div>
+
+					
+					<h3>Huh?</h3>
+					<p>The Mugshot Of The Day is a way for the community to select a single mugshot (from the previous day) that really stands out (for any reason you like). Mugshots are presented in random order so it does not matter when we take mugshots, or when we vote.</p>
+					
+					
+					<div class="clearboth"><!-- CLEAR --></div>    
+
+                  </div> 
+            </div>
+            <!-- END MAIN CONTENT AREA -->
+
+            <!-- START FOOTER -->
+            <div id="footer">
+                <div id="footer_text">
+                  <a href="/tos.html">Terms of Service</a> Copyright &copy; 2007-2008 Dailymugshot.com.  All rights reserved. 
+                </div>
+            </div>
+            <!-- END FOOTER -->
+        </div>
+        <!-- END SITE -->
+              <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+              </script>
+              <script type="text/javascript">
+                _uacct = "UA-2760766-1";
+                urchinTracker();
+              </script>
+	</body>
+</html>

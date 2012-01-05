@@ -5,5 +5,9 @@
 // the compiled file.
 //
 //= require jquery
+//= require prototype
 //= require jquery_ujs
+//= require swfobject
+//= require application_utilities
+//= require effects
 //= require_tree .

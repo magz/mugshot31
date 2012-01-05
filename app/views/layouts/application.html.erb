@@ -1,14 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mugshot31</title>
+  <title>New Daily Mugshot!</title>
   <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "base" %>
+  <%= stylesheet_link_tag    "public" %>
+  <%= stylesheet_link_tag    "quickstyles" %>
+
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <!-- BEGINNING SITE -->
+    <div id="site">
+        <!-- BEGINNING NAVIGATION COLUMN -->
+    	<div id="nav_column">
+          <div id="logo_box">
+        	<a href="/" id="home_link" title="Daily Mugshot Home">
+            	<!-- This is static for now...maybe just set up a cron job? -->
+		        <img  id="logo" src= <%= asset_path( "static_logo.png") %> />
+	            
 
-<%= yield %>
+		    </a> 
+	      </div>
+		  <!-- BEGINNING SIDE BOX -->
+          <div id="status_box" class="side_box">
+                <div class="side_box_header">
+                    <!--BLANK..why?-->
+   				</div>
+	            <div id="alert_container" class="side_box_content">
+                    <div id="alert_box">
+	                    <a href="#" class="new_mugshot">
+							<img border="false" src= <%= asset_path "dmslogo_med.png" %> class="thumbnail" />
+							<strong>Update Area:</strong>
+							<span class="description">Check here for updates!</span>
+	                    </a>
+                    </div>
+          		</div>    
+				<div id="search_box" class="side_box">
+					<div class="side_box_header"><!-- empty-->
+					</div>
+	                <div class="side_box_content">
+	                	search form goes here
+					</div>
+				
+				
+				</div>
+		  </div>
+		  <!-- END SIDE BOX -->  
+		  <!-- BEGINNING NAVIGATION -->
+          <div id="nav">
+			<div id="account_login" class="side_box">
+				<div class="side_box_header">
+					<!--BLANK-->
+				</div>
+				<div class="side_box_content">
+					<!--login area goes here-->
+				</div>
+				
+			</div>
+		  		<div id="nav_locations" class="side_box">
+					<div class="side_box_header">
+						<!--BLANK-->
+					</div>
+					<div class="side_box_content">	
+				        <%#= render :partial =>"layouts/sidenav" %>
+						
+					</div>
+			    </div>    
+		
+		
+		  </div>
+		</div>
+	  	<!-- END NAVIGATION -->              
+	
+	  	<!-- BEGINNING MAIN CONTENT AREA -->
+        <%#= render :partial => "main/tip" %>
+	  	<%# if flash[:notice] %>
+		<% if false %>
+		<div id= "alert", class="alert">
+			<div class="content">
+				<p><%= flash[:notice] %></p>
+			</div>
+		</div>
+		<% end %>
+		<div id="content" class="content_box">
+           <div class="content_box_header">
+                <!--BLANK-->
+           </div>
+              <div class="content_box_content">
+                <%= yield %>
+              </div> 
+        </div>
+        <!-- END MAIN CONTENT AREA -->
+        
+		<!-- START FOOTER -->
+        <div id="footer">
+            <div id="footer_text">
+              <%#= link_to "Terms of Service", "/tos.html" %> Copyright &copy; 2007-2010 Dailymugshot.com.  All rights reserved. 
+            </div>
+        </div>
+        <!-- END FOOTER -->
+        
 
+
+	</div>
+    <!-- END SITE...include analytics here -->
+	<%#= yield :foot %>
+	
+	
 </body>
 </html>

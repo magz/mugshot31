@@ -1,0 +1,22 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#iphone_app {
+	float: left;
+	margin-left: 0px;
+	margin-top: 15px;
+	width: 55%;
+}
+#iphone a{border:none;}
+#iphone .right {
+	color:#222222;
+	float:left;
+	margin-top:75px;
+}
+	#iphone .right .app_store{
+		float:left;
+		display:block;
+	}
+	#iphone .right .android_store{
+		float:right;
+	}

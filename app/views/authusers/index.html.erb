@@ -1,0 +1,21 @@
+<h1>Listing authusers</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @authusers.each do |authuser| %>
+  <tr>
+    <td><%= link_to 'Show', authuser %></td>
+    <td><%= link_to 'Edit', edit_authuser_path(authuser) %></td>
+    <td><%= link_to 'Destroy', authuser, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Authuser', new_authuser_path %>
